@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://1.94.249.13:26000/db_tpcc
+    username: joe
+    password: Bigdata@123
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    accessKeyId: LTAI5tK1ZPhmLa1dhMgiPEjQ
+    accessKeySecret: J685x2jO9FLy5aF5IfGf2ks8bEEeqT
+    bucketName: web-meeting
+server:
+  port: 9090
+  servlet:
+    context-path: /

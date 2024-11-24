@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chensongqing.mapper.DeptMapper">
+    <sql id="commonselect">
+        select id, name, age, gender, phone from user
+    </sql>
+    <insert id="insert">
+        insert into old_user(name,age,gender,phone) values(#{name},#{age},#{gender},#{phone})
+    </insert>
+
+    <select id="list" resultType="com.chensongqing.pojo.Dept">
+        <!--<include refid="commonselect"/>
+                 <where>
+                     <if test="name!=null">
+                         name like concat('%',#{name},'%')
+                     </if>
+                     <if test="gender!=null">
+                         and gender = #{gender}
+                     </if>
+                 </where>
+                 order by id-->
+        select *from emp
+    </select>
+    <delete id="delete">
+        delete from old_user where id = #{id}
+<!--        <foreach collection="l" item="id" separator="," open="(" close=")">-->
+<!--              #{id}-->
+<!--        </foreach>-->
+    </delete>
+</mapper>
