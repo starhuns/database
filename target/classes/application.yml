@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://1.94.249.13:26000/db_tpcc
+    url: 
     username: joe
     password: Bigdata@123
 mybatis:
